@@ -1,0 +1,1475 @@
+<inkd-content name="a" data-inkdviz="project: On the quest for true love">
+    <inkd-node name="openning" topic="a" start="" data-inkdviz="x: 20.0, y: 20.0, basicMode: true">
+        <div class="holdBox">
+            <img src="img/opening_screen.png" class="openningImg">
+
+            <inkd-button play-audio="optionMusic" goto="StartGame" tabindex="0" class="openningTBox">
+                <img src="img/openning_point1.png">
+                <h1 class="openningText">Story Begins</h1>
+                <img src="img/openning_point2.png">
+            </inkd-button>
+            
+            <div class="teamName openningTBox">
+                <div class="teamNameHide">
+                    <h1 class="openningText" style="color: #E85515">Our Team</h1>
+                    <p>Franshesca Castoria</p>
+                    <p>Hongze Chen</p>
+                    <p>Kha Nguyen</p>
+                    <p>Vidhi Shah</p>
+                    <p>Zhengchao Wu</p>
+                </div>
+                <div class="teamNameShow">
+                    <h1 class="openningText">Our Team</h1>
+                </div>
+            </div>
+            <!--<inkd-button play-audio="optionMusic" goto="ourTeam" tabindex="0" class="openningTBox">
+                <img src="img/openning_point1.png">
+                <div class="openningText">Our Team</div>
+                <img src="img/openning_point2.png">
+            </inkd-button>-->
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="StartGame" topic="b" data-inkdviz="x: 20.0, y: 20.0, basicMode: true">
+        <div class="holdBox">
+            <img src="img/opennin_title.png" class="openningImg openningImg2">
+            <inkd-box animation="flash:5s:5">
+                <p class="introductionInfo">hover your mouse over the characters to view the introduction</p>
+            </inkd-box>
+            <table class="introduction">
+                <tbody>
+                    <tr>
+                        <td id="left" onmouseover="mouseoverLeft()" onmouseout="mouseoutLeft()">
+                            <div id="sImgContainer">
+                                <img src="img/v.png">
+                                <h2>Shawnda</h2>
+                            </div>
+                            <div id="vInfoContainer">
+                                <p>Veronika is a member of the infamous New York Gang. Veronika is also in love with a fellow gang member, Shawnda and has been dating her for a while.</p>
+                            </div>
+                        </td>
+                        <td id="right" onmouseover="mouseoverRight()" onmouseout="mouseoutRight()">
+                            <div id="sInfoContainer">
+                                <p>Shawnda is a member of the infamous New York Gang. She works closely with the leader and is well-respected in the gang. Her ambition is to become the second-in-command and she is trying her best to get there. Shawnda is also in love with a fellow gang member, Veronika and has been dating her for a while.</p>
+
+                                <p>Fearless, sophisticated, aggressive and passionate, Shawnda has always been successful in her missions. In this story, Shawnda has been asked to take up an important mission. She will have to make difficult choices and choose between her loyalty to the gang and the person she loves. She might need to reassess her priorities - Keeping her true love or fulfilling her desire.</p> 
+
+                                <p>In this exciting journey, you’ll help make Shawnda make these important choices. You will decide her destiny.</p>
+                            </div>
+                            <div id="vImgContainer">
+                                <img src="img/s.png">
+                                <h2>Veronika</h2>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <inkd-button play-audio="optionMusic,bgMusic" goto="shawndaAndVeron_3" tabindex="0" class="openningTBox">
+                <img src="img/openning_point1.png">
+                <h1 class="openningText">Start</h1>
+                <img src="img/openning_point2.png">
+            </inkd-button>
+        </div>
+            <script>
+            function mouseoverLeft(){
+                var show = document.getElementById('sInfoContainer');
+                show.style.display = 'block';
+                var hide = document.getElementById('vImgContainer');
+                hide.style.display = 'none';
+                
+                show.style.transform = "translateX(50px)";
+                
+                var showBar = document.getElementById('left');
+                showBar.style.borderRight="2px solid white";
+            }
+            function mouseoutLeft(){
+                var show = document.getElementById('vImgContainer');
+                show.style.display = 'block';
+                var hide = document.getElementById('sInfoContainer');
+                hide.style.display = 'none';
+                var hideBar = document.getElementById('left');
+                hideBar.style.borderRight="0";
+                
+                hide.style.transform = "translateX(0px)";
+            }
+            function mouseoverRight(){
+                var show = document.getElementById('vInfoContainer');
+                show.style.display = 'block';
+                var hide = document.getElementById('sImgContainer');
+                hide.style.display = 'none';
+                
+                show.style.transform = "translateX(-50px)";
+                
+                var showBar = document.getElementById('right');
+                showBar.style.borderLeft="2px solid white";
+            }
+            function mouseoutRight(){
+                var show = document.getElementById('sImgContainer');
+                show.style.display = 'block';
+                var hide = document.getElementById('vInfoContainer');
+                hide.style.display = 'none';
+                var hideBar = document.getElementById('right');
+                hideBar.style.borderLeft="0";
+                
+                hide.style.transform = "translateX(0px)";
+            }
+        </script>
+    </inkd-node>
+    
+    <inkd-node name="shawndaAndVeron_3" topic="Shawnda and Veronika lying in bed, and Shawnda smoking and looking outside the window" data-inkdviz="x: 20.0, y: 20.0, basicMode: true" pause-audio="winMusic,deadMusic" restart-audio="bgMusic">
+        <div class="bgImgContainer">       
+            <img src = "img/bedRoom.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Veronika: Why are you up already?</p> 
+            <p>Shawnda: I just got a text from our boss, he wants me to go to the den. Veronica: C'mon, stay in bed with me a little longer.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaMeetingT" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Shawnda gets dressed and goes to the den</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="shawndaMeetingT_0" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Shawnda ignores the text and stays in bed with Veronika</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaMeetingT" topic="Shawnda meeting the gang leader at the den" data-inkdviz="x: 441.3, y: 12.0, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/scene_start.png" class="bgImg">
+        </div>
+        <div class="description">
+            <p>Gang leader: Shawnda, you're one of my best. You have never failed me.</p> 
+            <p>I have another mission for you, and this one is really important. We have a rat in our team. This snitch is working with the police to take us down.</p> 
+            <p>You need to find and kill this son of a b*tch for me.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaFollowsO" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Sure, you know you can count on me boss!</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="shawndaSaysNo" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">I'm sorry, I think I'm done with this. I don't want to accept this mission.</p>
+            </inkd-button>
+        </div>
+        
+    </inkd-node>
+    
+    <inkd-node name="shawndaMeetingT_0" topic="Shawnda meeting the gang leader at the den." data-inkdviz="x: 131.8, y: 365.0, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/scene_start.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>After spending some time with Veronika, Shawnda heads to the den.</p> 
+            <p>Gang leader: Shawnda, you're late! This is not how things work around here.</p>
+            <p>Shawnda: I'm sorry, I wasn't feeling too well.</p>
+            <p>Gang leader: I have another mission for you, and this one is really important. We have a rat in our team. This snitch is working with the police to take us down.</p>
+            <p>You need to find and kill this son of a b*tch for me.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaFollowsO" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Sure, you know you can count on me boss!</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="shawndaSaysNo" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">No, I can't take this up. I need some time off.</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaFollowsO" topic="Shawnda follows one suspicious gang member that she thinks could be the snitch" data-inkdviz="x: 624.1, y: 441.8, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/street.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Shawnda follows one suspicious gang member for several days thinking that he’s the snitch, but doesn’t find any connections with the cops. So she decides to move on.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaLookingA" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Report to the den</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="shawndaWithAnot" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Text Veronika to meet at the hotel</p>
+        </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaLookingA" topic="Shawnda looking at Veronika and the guy in the park" data-inkdviz="x: 994.9, y: 366.7, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/park.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>On her way to the den, Shawnda sees Veronika enter the park.</p>
+            <p>She starts to walk behind her to surprise her.</p>
+            <p>She is behind a tree, when she sees a strange man walk up to Veronika. They have a quick chat, and the guy hugs her and leaves.</p>
+            <p>Shawnda finds this meeting very suspicious and starts wondering if Veronika is the snitch.</p>
+            <p>At that moment, she receives a text from the gang leader to report to the den.</p>
+        </div>
+       
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="textMessageScre" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Is Veronika the snitch? Shawnda should confront her.</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="shawndaMeetsThe" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Shawnda decides to confront Veronika later and heads to the den.</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="textMessageScre" topic="Text message screen with Veronika’s picture" data-inkdviz="x: 1415.3, y: 435.0, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/scene_placehold.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Shawnda texts Veronika to meet her at the hotel room.</p>
+            <p>When Veronika enters the room, Shawnda: Where have you been? I've been waiting here for a while!</p>
+            <p>Veronika: Sorry love, I was caught up with something. I've missed you!</p>
+            <p>Shawnda: Don't lie to me! I saw you with a guy a while back, who was he?</p>
+            <p>Veronika: That was my brother Shawnda!</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="veronikaTalksAn" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">I don’t believe you! Are you the one talking to the cops?</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">I am sorry honey. I should have trusted you.</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaMeetsThe" topic="Shawnda meets the gang leader at the den" data-inkdviz="x: 1222.2, y: 578.0, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/scene_start.png" class="bgImg">
+        </div>
+        
+        <div class="description">        
+            <p>Shawnda asks the gang leader for more time. She hasn’t figured out who the snitch is yet.</p>
+            <p>The gang leader gets angry and slaps her.</p>
+            <p>He says, “I’m very disappointed in you Shawnda, I am gonna give you one last chance to figure out who the snitch is.</p>
+        </div>
+
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="textMessageScre" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">I promise I won’t fail this time.</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="shawndaGetsShot" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">I've really tried my best, I'm not lying.</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="veronikaTalksAn" topic="Veronika talks and convinces Shawnda" data-inkdviz="x: 1655.0, y: 611.7, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/scene_placehold.png" class="bgImg">
+        </div>
+        
+        <div class="description"><p>Veronika: The police have my brother, and I can’t let him die.</p>
+            <p>They let me see him today to make sure that I believe them.</p>
+            <p>I need to save him. If you love me, you need to help me set him free and we can all run away together.</p>
+            <p>Meet me at the hotel room at 11 pm, two days from now.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaGoesToTh" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Screw the gang leader, I'll just run away with Veronika!</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">I don’t believe Veronika, I need more evidence before I do anything</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaAndVeron" topic="Shawnda and Veronika go home together. While Veronika is taking a shower, Shawnda attaches a recorde" data-inkdviz="x: 1692.8, y: 887.9, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/bedRoom.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Shawnda and Veronika go home together.</p>
+            <p>While Veronika is taking a shower, Shawnda attaches a recorder into Veronika’s clothes.</p>
+            <p>Veronika leaves early the next morning.</p>
+            <p>Later that night, Shawnda recovers the recording and finds out that Veronika is cheating on her. She is talking to a boy who sounds like her lover. She is making a plan to runaway with him.</p>
+        </div>
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="veronikaAndShaw" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Invite Veronika for a date night</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="confrontationBedRoom" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Confront Veronika</p>
+        </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaGoesToTh" topic="Shawnda goes to the hotel room to meet Veronika and run away with her." data-inkdviz="x: 1817.2, y: 334.9, basicMode: true" restart-audio="deadMusic" pause-audio="bgMusic">
+        <div class="bgImgContainer">   
+            <inkd-box  animation = "fadeIn:3s, zoomIn:5s" effect="grayscale:0.5">
+                <img src = "img/hotel_withPolice.png" class="bgImg deadPic">
+            </inkd-box>
+        </div>
+        
+        <div class="description">
+            <p>When Shawnda enters the room, she finds the police waiting for her.</p>
+            <p>The cop points a gun at Shawnda and says "You're finished!".</p>
+            <p>Shawnda is shocked to see the cops there and asks them “Veronika sets me up?”.</p>
+            <p>The cop fires and the bullet hits Shawnda and she hits the window and falls out.</p>
+            <p>Veronika takes a photograph of Shawnda in the same room with the police and shows to the gang leader telling him that Shawnda was the snitch and she killed her.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="veronikaAndShaw" topic="Veronika and Shawnda talking at a bar" data-inkdviz="x: 2036.6, y: 439.4, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/bar.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>They are sitting down and the bartender comes up to the ladies and asks if they will be drinking tonight.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="veronikaAndShaw_0" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Orders a drink for Veronika</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="confrontationBar" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Orders food and water</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="confrontationBar" topic="Confrontation" data-inkdviz="x: 2020.4, y: 822.4, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/bar.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Shawnda confronts Veronika about the voice recording.</p> 
+            <p>Veronika acts surprised and starts yelling at Shawnda for recording her without permission.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="veronikaStormsO" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Ask Veronika to calm down.</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="veronikaStartsYBar" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Don't say anything</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="confrontationBedRoom" topic="Confrontation" data-inkdviz="x: 2020.4, y: 822.4, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/bar.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Shawnda confronts Veronika about the voice recording.</p> 
+            <p>Veronika acts surprised and starts yelling at Shawnda for recording her without permission.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="veronikaStormsO" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Ask Veronika to calm down.</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="veronikaStartsYBedRoom" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Don't say anything</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="veronikaAndShaw_0" topic="Veronika and Shawnda in conversation" data-inkdviz="x: 2340.0, y: 398.2, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/bar.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Shawnda engages Veronika in daily conversations. Veronika finishes her drink and is feeling refreshed. She seems calm and relaxed.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="confrontationBar" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Ask Veronika about the guy in the recording</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="veronikaGetsTip" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Order more drinks for Veronika</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="veronikaStormsO" topic="Veronika storms off" data-inkdviz="x: 2429.7, y: 622.6, basicMode: true" restart-audio="deadMusic" pause-audio="bgMusic">
+        <div class="bgImgContainer">
+            <inkd-box  animation = "fadeIn:3s, zoomIn:5s"  effect="grayscale:0.5">
+                <img src = "img/bloody.png" class="bgImg deadPic">
+            </inkd-box>
+        </div>
+        
+        <div class="description">
+            <p>Veronika gets angry and storms off.</p>
+            <p>Shawnda pays the bill and goes home to take some rest.</p>
+            <p>Later that night, while Shawnda is sleeping, she hears a noise and wakes up.</p>
+            <p>She tries to get up but realizes that she is tied to the bed. She realizes that someone is standing next to the bed looking at her.</p>
+            <p>When Shawnda looks up, she sees Veronika smirking at her.</p> 
+            <p>Veronika: Calm down Shawnda!</p>
+            <p>She slits Shawnda's throat and dark red liquid spills on the bedsheet.</p>
+            <p>Veronika takes Shawnda's head and delivers it to the gang leader informing him that Shawnda was the snitch.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="veronikaStartsYBar" topic="Veronika starts yelling" data-inkdviz="x: 2287.3, y: 815.8, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/bar.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Shawnda stays quiet while Veronika continues to yell.</p>
+            <p>The bartender notices the tense situation ands offers the ladies drinks.</p>
+            <p>In anger, Veronika shouts "No" to the bartender and starts throwing things at Shawnda.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaInTheAll"tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Shawnda gets up and leaves</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_0" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Drags Veronika outside to dark alley</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="veronikaStartsYBedRoom" topic="Veronika starts yelling" data-inkdviz="x: 2287.3, y: 815.8, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/bar.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Shawnda stays quiet while Veronika continues to yell.</p>
+            <p>The bartender notices the tense situation ands offers the ladies drinks.</p>
+            <p>In anger, Veronika shouts "No" to the bartender and starts throwing things at Shawnda.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaInTheAll"tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Shawnda gets up and leaves</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_0" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Drags Veronika outside to dark alley</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaInTheAll" topic="Shawnda in the alley" data-inkdviz="x: 2649.0, y: 1171.6, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/bar.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>As Shawnda walks out of the bar she realizes that she left her credit card with the bartender.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaLookingA_0" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Collect it now - head back to the bar</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="collectItNextDa" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Can collect it the next day</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaAndVeron_0" topic="Shawnda and Veronika talking in the alley" data-inkdviz="x: 2131.3, y: 1092.0, basicMode: true" restart-audio="winMusic"  pause-audio="bgMusic">
+        <div class="bgImgContainer">     
+            <inkd-box  animation = "fadeIn:3s, zoomIn:5s">
+                <img src = "img/alley.png" class="bgImg winPic">
+            </inkd-box>
+        </div>
+        
+        <div class="description">
+            <p>Shawnda is very upset with Veronika's lies.</p>
+            <p>Veronika has broken her heart and she realized that she has had enough and Veronika is not worth her love.</p>
+            <p>She decides to get rid of this distrbutton and focus again on being the gang leader.</p>
+            <p>Shawnds stabs Veronika and makes the scene looks like a robbery.</p>
+            <p>Then, Shawnda takes a picture of the scene and goes to the gang leader.</p>
+            <p>She declares Veronika the snitch and then Shawnda is introduced as the next-in-command.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+       
+    </inkd-node>
+    
+    <inkd-node name="veronikaGetsTip" topic="Veronika gets tipsy" data-inkdviz="x: 2623.1, y: 466.0, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/bar.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>After a few drinks, Veronika gets tipsy.</p> 
+            <p>Shawnda decides to use this moment to ask her if she was cheating on her.</p>
+            <p>Veronika refuses at first, but later admits to cheating on her. She admits that the guy she called her brother was really her lover,
+            She also confessed that she was just using Shawnda and fooling around with her. She never really loved her.</p>
+            <p>The conversation leaves Shawnda heartbroken.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaInTheAll" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Shawnda gets up and leaves the bar</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_1" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Asks Veronika to take a walk with her</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaAndVeron_1" topic="Shawnda and Veronika by the cliff" data-inkdviz="x: 2903.8, y: 541.7, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/cliff.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Shawnda starts walking aimlessly and Veronika follows her.</p>
+            <p>They reach a cliff and Shawnda slowly walks towards the edge of the cliff.</p>
+            <p>It was a dark starry night, and there was not a soul in sight.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_2" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Push Veronika off the cliff</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="veronikaFalling" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Shoot Veronika</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="shawndaFallingO" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Walk by the cliff edge</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaAndVeron_2" topic="Shawnda and Veronika falling off the cliff" data-inkdviz="x: 3014.4, y: 794.2, basicMode: true" restart-audio="deadMusic" pause-audio="bgMusic">
+        <div class="bgImgContainer">
+            <inkd-box  animation = "fadeIn:3s, zoomIn:5s"  effect="grayscale:0.5">
+                <img src = "img/cliff_withFoot.png" class="bgImg deadPic">
+            </inkd-box>
+        </div>
+        
+        <div class="description">
+            <p>Shawnda was heartbroken, hurt and angry.</p> 
+            <p>She decided that if she can't have Veronika, no one can.</p>
+            <p>Shawnda suddenly pushes Veronika off the cliff and looks at her figure slowly disappearing and hearing her screams echo as she enters the abyss of
+            the ocean.</p>
+            <p>Shawnda decides to jump in after her, because even though their love didn’t survive this life, in theit next life they both can be together.</p>
+            <p>As Shawnda falls down the cliff, she closes her eyes smiling, welcoming the darkness as she joins her beloved in her next life.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+        
+    </inkd-node>
+    
+    <inkd-node name="veronikaFalling" topic="Veronika falling off the cliff" data-inkdviz="x: 3134.7, y: 414.6, basicMode: true" restart-audio="winMusic"  pause-audio="bgMusic">
+        <div class="bgImgContainer">
+            <inkd-box  animation = "fadeIn:3s, zoomIn:5s">
+                <img src = "img/succeed.png" class="bgImg winPic">
+            </inkd-box>
+        </div>
+        
+        <div class="description">
+            <p>Out of anger over Veronika’s disloyalty, Shawnda takes out her handgun and shoots Veronika in the back while whispering ”I Loved You” in her ear.</p>
+            <p>Shawnda pushed Veronika down the cliff and walked away from the scene.</p> 
+            <p>She realizes that her status is more important than love. She decides to focus on finding out who the snitch is and eventually become the gang leader.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaFallingO" topic="Shawnda falling off the cliff" data-inkdviz="x: 3201.9, y: 643.9, basicMode: true" restart-audio="deadMusic" pause-audio="bgMusic">
+        <div class="bgImgContainer">  
+            <inkd-box  animation = "fadeIn:3s, zoomIn:5s"  effect="grayscale:0.5">
+                <img src = "img/bloody.png" class="bgImg deadPic">
+            </inkd-box>
+        </div>
+        
+        <div class="description">
+            <p>Shawnda was heartbroken and distraught. She couldn't believe that her love had cheated on her.</p>
+            <p>Lost deep in her thoughts, Shawnda stumbled near the edge of the cliff.</p>
+            <p>Veronika in her drunken state pushes Shawnda as a tease, but ends up knocking Shawnda over the edge.</p>
+            <p>Veronika, realizing what she has done, runs away in shock.</p>
+            <p>Shawnda ends up falling towards the rocky waters head first wishing she had a do over. As her life flashes before her eyes, her head cracks on the sharp rock, causing a fast, bleak death.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+       
+    </inkd-node>
+    
+    <inkd-node name="shawndaWithAnot" topic="Shawnda with another gang member on the street" data-inkdviz="x: 686.3, y: 651.1, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/street2.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>As Shawnda heads to the hotel room, she sees Spike, another member from her gang.</p>
+            <p>Spike nods at Shawnda to acknowledge her.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndSpike" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Stop and greet Spike</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="hotelRoom" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Ignore Spike and continue to the hotel</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaAndSpike" topic="Shawnda and Spike on the street" data-inkdviz="x: 838.8, y: 854.4, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/street2.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Spike: The gang leader has received some intel and thinks that Veronika is the snitch.</p>
+            <p>He has ordered the others to kill her.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_4" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Text Veronika to meet at a different hotel</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="hotelRoom" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Ignore Spike's warning and head to the hotel room</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="hotelRoom" topic="Hotel room" data-inkdviz="x: 498.3, y: 824.4, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/hotel_gang.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Shwanda enters the hotel room and is glad to see Veronika waiting there.</p>
+            <p>As she starts to talk, there is a loud bang and the door flies open.</p>
+            <p>Another gang member enters the room with a gun pointed at Veronika.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_5"
+                tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Pull out gun to try and save Veronika</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="hotelRoomShawnd" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Try talking to the gang member</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaAndVeron_4" topic="Shawnda and Veronika in hotel room" data-inkdviz="x: 941.3, y: 1119.9, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/hotel2.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Shawnda thanks Spike for the information and goes to the other hotel to meet Veronika.</p>
+            <p>Veronika enters the room and Shawnda confronts her.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_7" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Ask Veronika if she's the snitch</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_6" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Ask Veronika if she knows who the snitch is</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaAndVeron_5" topic="Shawnda and Veronika die" data-inkdviz="x: 526.6, y: 1120.8, basicMode: true" restart-audio="deadMusic" pause-audio="bgMusic">
+        <div class="bgImgContainer">
+            <inkd-box  animation = "fadeIn:3s, zoomIn:5s"  effect="grayscale:0.5">
+                <img src = "img/hotel_gang.png" class="bgImg deadPic">
+            </inkd-box>
+        </div>
+        
+        <div class="description">
+            <p>The gang member sees Shawnda pulling out her gun and shoots her.</p>
+            <p>The bullet hits Shawnda in the head and she collapses.</p>
+            <p>Seeing Shawnda eyes close, Veronika screams. The gang member then turns to Veronika and shoots her.</p>
+            <p>Veronika is hit and she falls down next to Shawnda and takes her last breath.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+        
+    </inkd-node>
+    
+    <inkd-node name="hotelRoomShawnd" topic="Hotel Room - Shawnda, Veronika, and gang member" data-inkdviz="x: 765.8, y: 1278.0, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/hotel_gang.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Gang member: Veronika has been ratting out to the cops. I've been asked to take her down.</p>
+            <p>Shawnda tries to calm him down.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="defendVeronikaB" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Defend Veronika</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="shawndaAndGangM" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Question Veronika</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="defendVeronikaB" topic="Defend Veronika - Both die" data-inkdviz="x: 745.7, y: 1566.9, basicMode: true" restart-audio="deadMusic" pause-audio="bgMusic">
+        <div class="bgImgContainer">
+            <inkd-box  animation = "fadeIn:3s, zoomIn:5s"  effect="grayscale:0.5">
+                <img src = "img/hotel_gang.png" class="bgImg deadPic">
+            </inkd-box>
+        </div>
+        
+        <div class="description">
+            <p>Shawnda: No, no. Veronika is not the snitch.</p>
+            <p>The gang member is not ready to listen. He is not convinced and starts thinking that Shawnda and Veronika are in it together.</p>
+            <p>He shoots Shawnda and Veronika, killing them both.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaAndVeron_7" topic="Shawnda and Veronika arguing" data-inkdviz="x: 1218.7, y: 1376.8, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/hotel2.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Veronika: No Shawnda. I'm not the snitch! I can't believe that you're questioning me. How could you? Don't you trust me at all?</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Doesn't trust Veronika, but apologizes and goes home with her</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="shawndaGetsShot_0" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Trusts Veronika and goes home with her</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaAndVeron_6" topic="Shawnda and Veronika talking" data-inkdviz="x: 1132.0, y: 1741.3, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/bedRoom.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Veronika: I think I might know who the snitch is.</p>
+            <p>Shawnda: Who is it? Tell me now!</p>
+            <p>Veronika tries to act sneaky and run out of the room, but Shawnda catches her and hits her on the head with a flower vase lying on the table.</p>
+            <p>Veronika drops down unconscious.</p>
+            <p>Shawnda sees that Veronika’s jacket and phone are lying on the bed.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaLookingT" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Pick up the jacket and search the pockets</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="lookingAtVeroni" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Pick up the phone and go through it</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaLookingA_0" topic="Shawnda looking at phone" data-inkdviz="x: 1833.8, y: 1402.8, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/bar.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Shawnda sees Veronika's phone lying at the bar and decides to pick it up.</p>
+            <p>She unlocks it and starts going through it. She finds an obscene video of Veronika having sex with an unknown man.</p>
+            <p>Shawnda is furious. While reviewing Veronika's text messages,she also sees a text message sent to a blocked number about the gang's upcoming operation.</p>
+            <p>Shawnda is livid.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="veronikaComesBa" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Forward the evidence to the gang leader</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="veronikaComesBa" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Put Veronika's phone in her pocket</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaLookingT" topic="Shawnda looking through the jacket" data-inkdviz="x: 1505.1, y: 1745.4, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/bedRoom.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Shawnda looks through Veronika’s jacket and finds a piece of paper.</p>
+            <p>When she holds it up, she realizes it's a cop's business card.</p>
+            <p>Shawnda is shocked and confused. She stumbles on the bed and sits down trying to compose herself.</p>
+            <p>Veronika comes to her senses and sees Shawnda with the business card.</p>
+            <p>Veronika becomes angry and charges forward to tackle Shawnda.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="dodgeBedRoom" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Shawnda looks up and dodges Veronika</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="freeze" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Shawnda sits there frozen trying to make sense of things</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="veronikaComesBa" topic="Veronika comes back" data-inkdviz="x: 1664.0, y: 1992.4, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/bar.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>As Veronika comes back from the restroom, she sees Shawnda with her phone.</p>
+            <p>She gets angry and tries to tackle Shawnda.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="dodge" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Shawnda sees Veronika and quickly dodges her</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="freezes" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Shawnda stands there frozen trying to make sense of things</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="dodgeBedRoom" topic="Dodge" data-inkdviz="x: 2101.4, y: 1809.6, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/bedRoom.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>As Shawnda jumps out of the way, Veronika rams her head into the wall, Shawnda takes that opportunity to hit Veronika from the back and knocks her out.</p>
+            <p>Veronika collapses to the floor and lays there unconscious.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaLookingA_1" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Take Veronika to the gang leader</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="shawndaLookingA_2" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Take Veronika home</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="dodge" topic="Dodge" data-inkdviz="x: 2101.4, y: 1809.6, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/bar.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>As Shawnda jumps out of the way, Veronika rams her head into the wall, Shawnda takes that opportunity to hit Veronika from the back and knocks her out.</p>
+            <p>Veronika collapses to the floor and lays there unconscious.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaLookingA_1" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Take Veronika to the gang leader</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="shawndaLookingA_2" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Take Veronika home</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaLookingA_1" topic="Shawnda looking at Veronika sleep - At the den" data-inkdviz="x: 1725.8, y: 2246.0, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/den.png" class="bgImg">
+        </div>
+        <div class="description">
+            <p>The gang leader is happy.</p>
+            <p>While the gang is cheering, Shawnda is sitting next to Veronika heartbroken.</p>
+            <p>She can't believe that someone she loved so much betrayed her. It infuriates Shawnda, and she decides to kill her.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaBecomesG" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Pull out a knife and stab Veronika</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="shawndaBecomesT" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Pull out a knife and slit Veronika's throat</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaLookingA_2" topic="Shawnda looking at Veronika sleep - At home" data-inkdviz="x: 2228.1, y: 2139.2, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/bedRoom.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Shawnda lays Veronika on her bed.</p>
+            <p>She is heart broken that her girlfriend betrayed her and is so livid that she decides to kill Veronika.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="meetTheGangLead" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Kill Veronika and make it look like suicide</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="meetTheGangLead_0" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Decapitate Veronika and take her head to the den</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaBecomesG" topic="Shawnda becomes gang leader" data-inkdviz="x: 1491.0, y: 2487.5, basicMode: true" restart-audio="winMusic"  pause-audio="bgMusic">
+        <div class="bgImgContainer">   
+            <inkd-box  animation = "fadeIn:3s, zoomIn:5s">
+                <img src = "img/succeed2.png" class="bgImg winPic">
+            </inkd-box>
+        </div>
+        
+        <div class="description"> 
+            <p>Shawnda stabs Veronika multiple times in front of the gang leader.</p>
+            <p>As Veronika screams in agony and her dark red blood starts flowing out her stab wounds, Shawnda tears up a little, but still continues to stab Veronika.</p>
+            <p>The light fades from Veronika's eyes and she lays there motionless in a pool of blood.</p>
+            <p>The gang leader is amazed by Shawnda’s passion to kill the traitor. He proclaims Shawnda as the next-in-command, and named her “The Merciless Killer”.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+       
+    </inkd-node>
+    
+    <inkd-node name="shawndaBecomesT" topic="Shawnda becomes the gang leader 2" data-inkdviz="x: 1860.9, y: 2464.2, basicMode: true" restart-audio="winMusic"  pause-audio="bgMusic">
+        <div class="bgImgContainer">  
+            <inkd-box  animation = "fadeIn:3s, zoomIn:5s">
+                <img src = "img/succeed2.png" class="bgImg winPic">
+            </inkd-box>
+        </div>
+        
+        <div class="description">
+            <p>Shawnda quickly decapitates Veronika.</p>
+            <p>Veronika's head rolls and hits the floor. Shawnda picks it up and holds it high and says, "If anyone snitches, this will be the outcome!".</p>
+            <p>The rest of the gang looks at Shawnda in awe and fear.</p>
+            <p>The gang leader, impressed by the clean kill makes Veronika the second-in-command and names her “The Quick Killer”-</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+        
+    </inkd-node>
+    
+    <inkd-node name="meetTheGangLead" topic="Meet the gang leader - suicide" data-inkdviz="x: 2248.0, y: 2399.2, basicMode: true" restart-audio="winMusic"  pause-audio="bgMusic">
+        <div class="bgImgContainer">     
+            <inkd-box  animation = "fadeIn:3s, zoomIn:5s">
+                <img src = "img/succeed2.png" class="bgImg winPic">
+            </inkd-box>
+        </div>
+        
+        <div class="description">
+            <p>After committing the deed, Shawnda heads to the den to report to the gang leader.</p>
+            <p>Gang Leader: Welcome back Shawnda! Have you taken care of the snitch?</p>
+            <p>Shawnda shows him pictures of the planned suicide.</p>
+            <p>The gang leader is impressed and congratulated Shawnda on her task.</p>
+            <p>Later, he made an announcement and declared Shawnda the second-in-command in front of the whole gang.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="meetTheGangLead_0" topic="Meet the gang leader - Veronika's head" data-inkdviz="x: 2454.0, y: 2301.1, basicMode: true" restart-audio="winMusic"  pause-audio="bgMusic">
+        <div class="bgImgContainer">   
+            <inkd-box  animation = "fadeIn:3s, zoomIn:5s">
+                <img src = "img/succeed2.png" class="bgImg winPic">
+            </inkd-box>
+        </div>
+        
+        <div class="description">
+            <p>After committing the deed, Shawnda heads to the den to report to the gang leader.</p>
+            <p>Gang Leader: Welcome back Shawnda! Have you taken care of the snitch?</p>
+            <p>Shawnda proudly shows Veronika’s head to the gang leader.</p>
+            <p>The gang leader is impressed and congratulated Shawnda.</p>
+            <p>Later, the he made an announcement and declared Shawnda the second-in-command in front of the whole gang.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+        
+    </inkd-node>
+    
+    <inkd-node name="shawndaSaysNo" topic="Shawnda says no" data-inkdviz="x: 327.1, y: 218.9, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/scene_start.png" class="bgImg">
+        </div>
+        
+        <div class="description">     
+            <p>The gang leader is surprised to hear Shawnda refuse.</p>
+            <p>It infuriates him, and he pulls out his gun and points it at Shawnda. Gang Leader: I’m going to ask you again, do you accept your mission?</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="gangLeaderShoot" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">I really need a break. I want to spend some time with Veronika!</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="meetingSpike" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Fine, I'll snoop around a little and report back</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="gangLeaderShoot" topic="Gang leader shoots Shawnda" data-inkdviz="x: 826.2, y: 176.0, basicMode: true" restart-audio="deadMusic" pause-audio="bgMusic">
+        <div class="bgImgContainer">  
+            <inkd-box  animation = "fadeIn:3s, zoomIn:5s"  effect="grayscale:0.5">
+                <img src = "img/bloody.png" class="bgImg deadPic">
+            </inkd-box>
+        </div>
+        
+        <div class="description">
+            <p>Gang Leader: I'm trying to think of reasons why you would be turning down this opportunity, and I can come up with just one. Maybe, you're the snitch. So let's finish this once and for all.</p>
+            <p>The gang leader shoots Shawnda. Shawnda is shocked as the bullet comes racing at her. It hits her forehead and she falls down backwards with the force. The blood starts to flow out, and the light slowly leaves her eyes.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaGetsShot" topic="Shawnda gets shot" data-inkdviz="x: 1295.3, y: 793.2, basicMode: true" restart-audio="deadMusic" pause-audio="bgMusic">
+        <div class="bgImgContainer">    
+           <inkd-box  animation = "fadeIn:3s, zoomIn:5s"  effect="grayscale:0.5">
+                <img src = "img/scene_start.png" class="bgImg deadPic">
+            </inkd-box>
+        </div>
+        
+        <div class="description"> 
+            <p>Gang Leader: I'm trying to think of reasons why you failed this task and I can think of just one. Maybe, you're the snitch. So let's finish this once and for all.</p>
+            <p>The gang leader shoots Shawnda. Shawnda is shocked as the bullet comes racing at her. It hits her forehead and she falls down backwards with the force. The blood starts to flow out, and the light slowly leaves her eyes.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option" restart-audio="deadMusic" pause-audio="bgMusic">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+       
+    </inkd-node>
+    
+    <inkd-node name="freeze" topic="Freeze" data-inkdviz="x: 1285.0, y: 1970.7, basicMode: true" restart-audio="deadMusic" pause-audio="bgMusic">
+        <div class="bgImgContainer">      
+            <inkd-box  animation = "fadeIn:3s, zoomIn:5s"  effect="grayscale:0.5">
+                <img src = "img/bloody.png" class="bgImg deadPic">
+            </inkd-box>
+        </div>
+        
+        <div class="description">
+            <p>Before Shawnda could even react, Veronika pulls out her knife and plunges it into Shawnda's stomach.</p>
+            <p>She stabs her multiple times. The light slowly leaves Shawnda's eyes and she lays there motionless in a pool of blood.</p>
+            <p>Veronika gets up, washes her hands and leaves the room.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+        
+    </inkd-node>
+    
+    <inkd-node name="collectItNextDa" topic="Collect it next day" data-inkdviz="x: 2900.9, y: 1307.5, basicMode: true" restart-audio="deadMusic" pause-audio="bgMusic">
+        <div class="bgImgContainer">  
+            <inkd-box  animation = "fadeIn:3s, zoomIn:5s"  effect="grayscale:0.5">
+                <img src = "img/bloody.png" class="bgImg deadPic">
+            </inkd-box>
+        </div>
+        
+        <div class="description"> 
+            <p>Shawnda decides to call it a night. She is devastated and heart broken.</p>
+            <p>She takes a cab and heads home.</p>
+            <p>As soon as she enters her house, she looks at a framed photograph of Veronika and her at their first date.</p>
+            <p>She is so depressed that she grabs a knife from the kitchen drawer. She picks up the frame and heads to the bath tub. She gets into the tub when the water is warm enough, hugs the frame and slits her wrist.</p>
+            <p>She closes her eyes, and welcomes the darkness with tears in her eyes.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+       
+    </inkd-node>
+    
+    <inkd-node name="meetingSpike" topic="Meeting Spike" data-inkdviz="x: 311.3, y: 706.9, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/street2.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>As Shawnda leaves the den, she texts Veronika to meet her.</p>
+            <p>On her way to the hotel room, Shawnda sees Spike, another member from her gang rummaging through some boxes.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="greetSpike" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Stop and greet Spike</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="hotelRoom" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Ignore Spike</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="greetSpike" topic="Greet Spike" data-inkdviz="x: 120.6, y: 1028.9, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/street2.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Shawnda: Hey Spike, how's it going? </p>
+            <p>Spike: Hey! I was just going to text you.</p>
+            <p>Shawnda: What's up?</p>
+            <p>Spike: I was just at the bar and I saw your girl there making out with a creepy dude.</p>
+        </div>
+        
+       <div class="options">
+            <inkd-button play-audio="optionMusic" goto="doesntBelieveSp" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">I don't believe you. She is gay you know?</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="recordingVeroni" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Thanks Spike, but I need some evidence.</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="doesntBelieveSp" topic="Doesn't believe Spike" data-inkdviz="x: 318.5, y: 1260.7, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/street2.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Shawnda yells at Spike for accusing Veronika of cheating and storms off.</p>
+            <p>She heads to the hotel room to meet Veronika.</p>
+            <p>As soon as Shawnda sees Veronika, she runs towards her and gives her a tight hug. Veronika is surprised and they're about to
+            kiss when there is a loud bang and the door flies open.</p>
+            <p>Another gang member enters the room with a gun pointed at Veronika.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_5" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Pull out gun to try and save Veronika</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="hotelRoomShawnd" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Try talking to the gang member</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="recordingVeroni" topic="Recording Veronika" data-inkdviz="x: 224.0, y: 1835.1, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/bedRoom.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Shawnda thanks Spike for the information and goes home to meet Veronika.</p>
+            <p>When Veronika is in the shower, Shawnda attaches a recorder on her clothes.</p>
+            <p>The next day, Shawnda recovers the recording and finds out that Spike was right.</p>
+            <p>Veronika is talking to a boy who sounds like her lover and is making a plan to runaway with him.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="veronikaAndShaw" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Invite Veronika for drinks at the bar</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="confrontation3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Confront Veronika right away</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="shawndaAndGangM" topic="Shawnda and gang member die" data-inkdviz="x: 965.8, y: 1478.0, basicMode: true" restart-audio="deadMusic" pause-audio="bgMusic">
+        <div class="bgImgContainer">    
+            <inkd-box  animation = "fadeIn:3s, zoomIn:5s"  effect="grayscale:0.5">
+                <img src = "img/hotel_gang.png" class="bgImg deadPic">
+            </inkd-box>
+        </div>
+        
+        <div class="description">
+            <p>Veronika is cornered in. She tries to reason out with Shawnda and the other gang member.</p>
+            <p>When she realizes that it's not headed anywhere, she pulls out her gun and shoots the other gang member. Then she shoots Shawnda, saying "I can't believe you thought I loved you!"</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+        
+    </inkd-node>
+    
+    <inkd-node name="confrontation3" topic="Confrontation 3" data-inkdviz="x: 424.0, y: 2035.1, basicMode: true" restart-audio="winMusic" pause-audio="bgMusic">
+        <div class="bgImgContainer">   
+            <inkd-box  animation = "fadeIn:3s, zoomIn:5s">
+                <img src = "img/succeed2.png" class="bgImg winPic">
+            </inkd-box>
+        </div>
+        
+        <div class="description">
+            <p>Shawnda confronts Veronika about the voice recording.</p>
+            <p>Veronika acts surprised and starts yelling at Shawnda for recording her without permission.</p>
+            <p>Shawnda is very upset, Veronika has broken her heart and she realized that she has had enough and Veronika is not worth her love.</p>
+            <p>She decides to get rid of this distrbutton and focus again on becoming the gang leader.</p>
+            <p>Shawnda grabs a knife from the kitchen and stabs Veronika.</p>
+            <p>She then goes to the gang leader and declares Veronika the snitch.</p>
+            <p>The gang leader appreciates Shawnda for a job well done and proclaims her as next-in-command.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+        
+    </inkd-node>
+    
+    <inkd-node name="freezes" topic="Freezes" data-inkdviz="x: 1501.8, y: 2237.1, basicMode: true" restart-audio="deadMusic" pause-audio="bgMusic">
+        <div class="bgImgContainer">       
+            <img src = "img/bloody.png" class="bgImg deadPic">
+        </div>
+        
+        <div class="description">
+            <p>Before Shawnda could even react, Veronika pulls out her knife and plunges it into Shawnda's stomach.</p>
+            <p>She stabs her multiple times. The light slowly leaves Shawnda's eyes and she lays there motionless in a pool of blood.</p>
+            <p>Veronika runs out.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+        
+    </inkd-node>
+    
+    <inkd-node name="shawndaGetsShot_0" topic="Shawnda gets shot at home" data-inkdviz="x: 1441.3, y: 1394.3, basicMode: true" restart-audio="deadMusic" pause-audio="bgMusic">
+        <div class="bgImgContainer"> 
+            <inkd-box  animation = "fadeIn:3s, zoomIn:5s"  effect="grayscale:0.5">
+                <img src = "img/policeWithGun.png" class="bgImg deadPic">
+            </inkd-box>
+        </div>
+        
+        <div class="description">
+            <p>When Shawnda enters her house, she finds the police waiting for her.</p>
+            <p>She turns to Veronika and asks her to run.</p>
+            <p>The cop points a gun at Shawnda and says "You're finished!". Shawnda is shocked to see the cops there and is wondering they got there.</p>
+            <p>The cop looks at Veronika and says "Thanks for the tip". </p>
+            <p>Shawnda can't believe that Veronika set her up.</p>
+            <p>The cop fires and the bullet hits Shawnda and she hits the window and falls out.</p>
+            <p>Veronika takes a photograph of Shawnda in the same room with the police and shows it to the gang leader telling him that Shawnda was the snitch and she killed her.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="shawndaAndVeron_3" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Restart</p>
+            </inkd-button>
+        </div>
+        
+    </inkd-node>
+    
+    <inkd-node name="lookingAtVeroni" topic="Looking at Veronika's phone" data-inkdviz="x: 947.4, y: 1991.1, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/bedRoom.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Shawnda unlocks Veronika's phone and starts going through it.</p>
+            <p>She finds an obscene video of Veronika having sex with an unknown man.</p>
+            <p>Shawnda is furious. While reviewing Veronika's text messages, she also sees a text message sent to a blocked number about the gang's upcoming operation.</p>
+            <p>Shawnda is livid.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="veronikaWakesUp" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Put Veronika's phone in her pocket</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="veronikaWakesUp" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Forward the evidence to the gang leader</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+    <inkd-node name="veronikaWakesUp" topic="Veronika wakes up" data-inkdviz="x: 929.8, y: 2289.4, basicMode: true">
+        <div class="bgImgContainer">       
+            <img src = "img/bedRoom.png" class="bgImg">
+        </div>
+        
+        <div class="description">
+            <p>Veronika comes back to her senses, she sees Shawnda with her phone. She gets angry and tries to tackle Shawnda.</p>
+        </div>
+        
+        <div class="options">
+            <inkd-button play-audio="optionMusic" goto="freezes" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Shawnda stands there frozen trying to make sense of things</p>
+            </inkd-button>
+            <inkd-button play-audio="optionMusic" goto="dodgeBedRoom" tabindex="0" class="option">
+                <img src="img/point.png">
+                <p class="optionText">Shawnda sees Veronika and quickly dodges her</p>
+            </inkd-button>
+        </div>
+    </inkd-node>
+    
+</inkd-content>

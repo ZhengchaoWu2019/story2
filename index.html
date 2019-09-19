@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+    <!--DO NOT CHANGE THE LINES BELOW HERE-->
+    <script src="inkd/webcomponents-lite.js" type="application/javascript"></script>
+    <link rel="import" href="inkd/inkd.html">
+    <link rel="icon" href="inkd/inkd-images/inkd-icon.png" type="image/png">
+    <!--DO NOT CHANGE THE LINES ABOVE HERE-->
+
+    <!--THIS FILE HOLDS YOUR CUSTOM STORY STYLING.
+            YOU CAN EDIT THE FILE NAME, IF YOU WANT.
+        -->
+    <link rel="import" href="OnTheQuestForTrueLove_final.html">
+
+    <!--THIS FILE HOLDS YOUR STORY. YOU SHOULD CHANGE
+            THIS FILE NAME (AND THE LINK HERE) TO MATCH
+            YOUR STORY'S NAME (WITHOUT SPACES, OF COURSE!)
+        -->
+    <link rel="import" href="my_story_style.html">
+
+    <!--CHANGE THE TITLE TO MATCH YOUR STORY'S TITLE
+            AS YOU WANT IT TO APPEAR ON EACH PAGE-->
+    <title>On The Quest For True Love</title>
+
+</head>
+
+<body>
+    <inkd-ml>
+        <!--inkd-cyoa HOLDS THE STORY. YOU DON'T NEED TO CHANGE
+        THIS NAME UNLESS YOU ARE COMBINING MULTIPLE STORIES
+        INTO ONE BIGGER PROJECT-->
+        <inkd-audio src="audio/ImpactBambooWoodenBambooCaneHit.wav" name="optionMusic"></inkd-audio>
+        <inkd-audio src="audio/ES_HonoratLast-HectorPosser.mp3" name="winMusic"></inkd-audio>
+        <inkd-audio src="audio/ES_LastWords.mp3" name="deadMusic"></inkd-audio>
+        <inkd-audio src="audio/bgMusic.mp3" name="bgMusic" loop></inkd-audio>
+        <inkd-cyoa name="main">
+            
+            <!--DEFAULT inkd-include. YOU CAN CHANGE
+                THIS IF YOU WANT. THE NAME MUST MATCH
+                THE inkd-content name THAT HOLDS YOUR STORY NODES.-->
+            <inkd-include content="a"></inkd-include>
+        </inkd-cyoa>
+    </inkd-ml>
+</body>
+</html>

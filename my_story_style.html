@@ -1,0 +1,288 @@
+<!--PUT YOUR CUSTOM CSS BETWEEN THESE TWO
+    STYLE TAGS. YOU MUST NOT USE THE STYLE TAG
+    IN YOUR STORY FILES, BUT YOU CAN USE THE STYLE
+    PROPERTY IN STORY FILES.
+
+    THIS FILE IS THE BEST PLACE TO PUT YOUR CUSTOM
+    CSS IF YOU WANT TO ENSURE THAT IT WORKS WITH
+    INKDML.
+-->
+
+<style is="custom-style">
+    /*
+    EXAMPLE CLASS. FEEL FREE TO DELETE. ALSO, REMEMBER
+    THAT COMMENTS ARE CREATED DIFFERENTLY
+    WHEN INSIDE OF A style TAG!
+    */
+    body{
+        margin: 0;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        /*background-color: #A8894F;*/
+        background: black/*linear-gradient(to bottom, #1D448B , #152B7D)*/;
+
+    }
+    
+    inkd-button{
+        background-color: inherit;
+        border: 1px solid #4F4F4F;
+        display: block;
+        text-align: left;
+        border-radius: 0;
+    }
+    
+    inkd-ml{
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: 0;
+        padding: 1em;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    .introductionInfo{
+        color: white;
+        opacity: 0.6;
+    }
+    
+    .openningText{
+        position: relative;
+        display: inline-block;
+        color: inherit;
+        font-size: 40px;
+        padding-left: 250px;
+        padding-right: 250px;
+        width: 500px;
+        height: 60px;
+        padding-top: -15px;
+        text-align: center;
+    }
+    
+    .teamNameHide>p{
+        margin-top: 0px;
+    }
+    
+    .openningTBox{
+        color: white;
+        vertical-align: bottom;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        height: 80px;
+    }
+    
+    .openningImg{
+        width: 1000px;
+        
+    }
+    
+    .openningImg2{
+        margin-top: 100px;
+    }
+    
+    .openningTBox p{
+        display: inline;
+    }
+    
+    .openningTBox img{
+        position: relative;
+        /*padding-top: 15px;*/
+        display: inline-block;
+    }
+    
+    .openningTBox:hover{
+        color: #E85515;
+        border: 2px solid white;
+    }
+    
+    .holdBox{
+        width: 1200px;
+        text-align: center;
+        border: 10px solid white;
+    }
+    
+    .teamName{
+        color: white;
+        border: 2px solid #3E3E3E;
+        margin-bottom: 210px;
+    }
+    
+    .teamName:hover{
+        color: white;
+        border: 2px solid white;
+    }
+    
+    .teamNameHide{
+        display: none;
+    }
+    
+    .teamNameHide p{
+        display: block;
+    }
+    
+    .teamName:hover .teamNameShow{
+        display: none;
+    }
+    
+    .teamName:hover .teamNameHide{
+        display: block;
+        border-bottom: 2px solid white;
+    }
+    
+    .introduction{
+        position: relative;
+        margin: auto;
+        color:white;
+        text-align: center;
+        width: 1000px;
+        /*border: 2px solid white;*/
+    }
+    
+    .introduction img{
+        max-width: 500px;
+    }
+    
+    #vInfoContainer{
+        display: none;
+        text-align: right;
+        transform: translateX(0px);
+        transition: transform 1s;
+    }
+    
+    #sInfoContainer{
+        text-align: left;
+        display: none;
+        transform: translateX(0px);
+        transition: transform 1s;
+    }
+    
+    inkd-node{
+        position: relative;
+        display: block;
+        margin: auto;
+        margin-top: 0px;
+        max-width: 1400px;
+        height: 600px;
+    }
+    
+    .bgImgContainer{
+        display: block;
+        position: absolute;
+        left: 436px;
+        width: 960px;
+        height: 540px;
+        border: 10px solid #3E3E3E;
+        overflow: hidden;
+    }
+    
+    .bgImgContainer:hover{
+        border: 10px solid white;
+    }
+    
+    .description{
+        position: absolute;
+        width: 400px;
+/*        top: 1em;
+        left: 830px;*/
+        height: 540px;
+        /*background-image: url(img/descriptionBG.png);*/
+        background-color: #4F4F4F;
+        border: 10px solid #3E3E3E;
+        color: white;
+        text-align: left;
+    }
+    
+    .description p{
+        margin: 0;
+        margin-left: 1em;
+        padding: 6px;
+        line-height: 18px;
+        font-size:20px;
+    }
+    
+    .description:hover{
+        border: 10px solid white;
+    }
+    
+    .description>p:first-child{
+        margin-top: 0.5em;
+    }
+    
+    inkd-action{
+        display: block;
+    }
+    
+    strong{
+        color: #E85515;
+    }
+    
+    .options{
+        text-align: left;
+        position: absolute;
+        top: 579px;
+        width: 1377px;
+        height: 120px;
+        /*top: 480px;*/
+        /*background-image: url(img/optionBG.png);*/
+        background-color: #4F4F4F;
+        border: 10px solid #3E3E3E;
+        color: white;
+    }
+    
+    .option{
+        padding: 10px;
+    }
+    
+    .optionText{
+        margin: 0;
+        padding: 0;
+        display: inline;
+        font-size: 20px;
+    }
+    
+/*    .optionText:hover{
+        padding: 5px;
+        color: #E85515;
+        border: 1px solid white;
+    }*/
+    
+    inkd-action{
+        border: 1px solid #4F4F4F;
+    }
+    
+    inkd-button:hover{
+        color: #E85515;
+        border: 1px solid white;
+    }
+    
+    .options:hover{
+        border: 10px solid white;
+    }
+    
+    .deadPic{
+        transition: filter 3s;
+    }
+    
+    .deadPic:hover{
+        filter: grayscale(100%);
+    }
+    
+    .winPic{
+        transition: filter 3s;
+    }
+    
+    .winPic:hover{
+    }
+    
+    .bgImg{
+        width: 100%;
+        transition: transform 3s;
+    }
+    
+    .bgImg:hover{
+        transform: scale(1.2);
+    }
+    
+</style>
